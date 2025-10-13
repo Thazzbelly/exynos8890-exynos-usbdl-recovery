@@ -70,6 +70,11 @@ DEVICE_DIR(){
 		echo " Selected A5 (2016) - SM-A510F"
 		CR_TARGET=A510F
 	fi
+	if [ "$CR_TARGET" = "5" ]; then
+		echo " "
+		echo " Selected Galaxy S7 Flat SKT - SM-G930S"
+		CR_TARGET=G930S
+	fi
 }
 
 FLASH(){
@@ -80,11 +85,11 @@ FLASH(){
 	echo "Hit enter when your device just connected"
 	read
 	./exynos-usbdl n $CR_TARGET/fwbl1.bin
-	sleep 0.1
+	sleep 1
 	./exynos-usbdl n $CR_TARGET/el3_mon.bin
-	sleep 0.1
+	sleep 1
 	./exynos-usbdl n $CR_TARGET/bl2.bin
-	sleep 0.1
+	sleep 1
 	./exynos-usbdl n $CR_TARGET/bootloader.bin
 }
 
@@ -95,11 +100,11 @@ echo "exynos8890-usbdl recovery"
 echo " "
 echo "1) herolte (SM-G930F)" "2) hero2lte (SM-G935F)" 
 echo "3) gracerlte (SM-N935F)" "4) a5xelte (SM-A510F)"
-echo "5) Abort" 
+echo "5) herolteskt (SM-G930S)"  "6) Abort" 
 echo  " "
 echo "----------------------------------------------"
 read -p "Please select your device (1-4) > " CR_TARGET
-if [ "$CR_TARGET" = "5" ]; then
+if [ "$CR_TARGET" = "6" ]; then
 	echo "Exit"
 	exit
 else
