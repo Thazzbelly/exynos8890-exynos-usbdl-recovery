@@ -32,6 +32,7 @@ There are few things to tell if you are in USB-DL. here are my observations . Al
 ## Supported Devies and binary version
 - SM-A510F - A510FXXS8CTI7 [ Only tested on Linux ]
 - SM-G930F - G930FXXU8EVH2
+- SM-G930S - G930SKSU3ETB2
 - SM-G935F - G935FXXU8EVH3
 - SM-N935F - N935FXXU8CVG2 [ Un-tested ]
 
