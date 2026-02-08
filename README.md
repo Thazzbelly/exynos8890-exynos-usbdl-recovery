@@ -1,7 +1,10 @@
+
 # [Exynos8890 Recovery](https://github.com/ananjaser1211/exynos8890-exynos-usbdl-recovery) - Re-flashing SBOOT via exynos-usbdl Mode
+
  Galaxy S7 / S7 Edge Exynos8890 / A5 2016 Bootloader recovery/unbrick through exynos-usbdl
 
 ## Description
+
 - Exynos devices support a flash mode caled "exynos-usbdl" which is triggered when Main Stage (UFS) Boot fails, a common scenario to fall into this mode is a bad bootloader flash (sboot.bin or cm.bin) or UFS Damage. these files will help you Recovery from that mode and "Unbrick" your phone aslong as the UFS Chip is *NOT* actually damaged.
 
 - So basically this post is about Attempting to unbrick bootloader on Galaxy S7 and S7 Edge Exynos8890.
@@ -15,6 +18,7 @@
 - **Recommended : A linux computer to run fredric exynos-usbdl flasher instead of MultiDownloader**
 
 ## Requirments to qualify for this Unbrick
+
 There are few things to tell if you are in USB-DL. here are my observations . All of them need to be met to be able to use this repo :
 
 - Your phone does not show LPM (Powered off charging) when plugged to AC outlet
@@ -30,15 +34,17 @@ There are few things to tell if you are in USB-DL. here are my observations . Al
 ![image](https://user-images.githubusercontent.com/25624482/234079282-18fb0dc5-6f18-4e70-a6d0-94411ba36208.png)
 
 ## Supported Devies and binary version
+
 - SM-A510F - A510FXXS8CTI7 [ Only tested on Linux ]
 - SM-G930F - G930FXXU8EVH2
 - SM-G930S - G930SKSU3ETB2
 - SM-G935F - G935FXXU8EVH3
 - SM-N935F - N935FXXU8CVG2 [ Un-tested ]
 
-* Other devices can be supported by finding proper offsets, if/when i find information on how to calculate said offsets i will update this
+- Other devices can be supported by finding proper offsets, if/when i find information on how to calculate said offsets i will update this
 
 ## Boring Details
+
 - on Windows we can use a tool called "MultiDownloader" + "ImageWriterUSBDriver_1113_00" to flash in usbdl mode
 - exynos-usbdl is a tool created by [@frederic](https://github.com/frederic) as part of an s-boot exploit, However we can use it to recovery from usb-dl much more consistently than windows, see [exynos-usbdl](https://github.com/frederic/exynos-usbdl)
 - The Tool is old and drivers originate from [Motorolla-BlankFlash](https://mirrors.lolinet.com/firmware/motorola/troika/blankflash/) which are [mirrored here](https://github.com/ananjaser1211/exynos8890-exynos-usbdl-recovery/releases/tag/usb-dl)
@@ -47,17 +53,18 @@ There are few things to tell if you are in USB-DL. here are my observations . Al
 - **No, Downgrading BOOTLOADER Version likely does not work due to the rollback bit. the binaries in this post are most recent Rev 8 binaries**
 
 ## Credits and sources
+
 - [@frederic](https://github.com/frederic) for their exynos-usbdl project and research
 
-- https://fredericb.info/2020/06/exynos-usbdl-unsigned-code-loader-for-exynos-bootrom.html
+- <https://fredericb.info/2020/06/exynos-usbdl-unsigned-code-loader-for-exynos-bootrom.html>
 
-- https://github.com/frederic/exynos-usbdl
+- <https://github.com/frederic/exynos-usbdl>
 
 - [@jeykul](https://github.com/JeyKul) for bricking their G930F to test
 
-- https://github.com/astarasikov/exynos9610-usb-emergency-recovery
+- <https://github.com/astarasikov/exynos9610-usb-emergency-recovery>
 
-- https://forum.xda-developers.com/t/guide-repair-hard-bricked-devices-with-deleted-bootloader-sboot.3573865/
+- <https://forum.xda-developers.com/t/guide-repair-hard-bricked-devices-with-deleted-bootloader-sboot.3573865/>
 
 ## Linux Instructions
 
@@ -89,11 +96,11 @@ There are few things to tell if you are in USB-DL. here are my observations . Al
 
 - Reference Video of usb-dl courtusy of [@jeykul](https://github.com/JeyKul)
 
-https://user-images.githubusercontent.com/25624482/234320219-ded8ef1b-2d7e-4fc9-8af6-71f2b8427573.mp4
+<https://user-images.githubusercontent.com/25624482/234320219-ded8ef1b-2d7e-4fc9-8af6-71f2b8427573.mp4>
 
 ## Windows Instructions
 
-** Note : Try to use Linux version instead as Multidownloader fails alot at the last step **
+**Note : Try to use Linux version instead as Multidownloader fails alot at the last step**
 
 - If your phone is actually stuck in USB-DL and has no hardware Fault, Then the recovery is as follows :
 
