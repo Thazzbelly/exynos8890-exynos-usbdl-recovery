@@ -40,6 +40,7 @@ There are few things to tell if you are in USB-DL. here are my observations . Al
 - SM-G930S - G930SKSU3ETB2
 - SM-G935F - G935FXXU8EVH3
 - SM-N935F - N935FXXU8CVG2 [ Un-tested ]
+- SM-A226B - A226BXXSBDYA2 (BL/AP), CP A226BXXSBDYA1, CSC A226BODMBDYA2 — Country: INS (reported via COM+ADB)
 
 - Other devices can be supported by finding proper offsets, if/when i find information on how to calculate said offsets i will update this
 
