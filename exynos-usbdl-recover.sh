@@ -75,6 +75,11 @@ DEVICE_DIR(){
 		echo " Selected Galaxy S7 Flat SKT - SM-G930S"
 		CR_TARGET=G930S
 	fi
+	if [ "$CR_TARGET" = "6" ]; then
+		echo " "
+		echo " Selec............................................................ted Galaxy A22 - SM-A226B"
+		CR_TARGET=A226B
+	fi
 }
 
 FLASH(){
@@ -100,11 +105,12 @@ echo "exynos8890-usbdl recovery"
 echo " "
 echo "1) herolte (SM-G930F)" "2) hero2lte (SM-G935F)" 
 echo "3) gracerlte (SM-N935F)" "4) a5xelte (SM-A510F)"
-echo "5) herolteskt (SM-G930S)"  "6) Abort" 
+echo "5) herolteskt (SM-G930S)" "6) a22x (SM-A226B)"
+echo "7) Abort" 
 echo  " "
 echo "----------------------------------------------"
-read -p "Please select your device (1-4) > " CR_TARGET
-if [ "$CR_TARGET" = "6" ]; then
+read -p "Please select your device (1-6) > " CR_TARGET
+if [ "$CR_TARGET" = "7" ]; then
 	echo "Exit"
 	exit
 else
